@@ -25,7 +25,7 @@ export default function Register() {
       try {
         await axios.post("https://node-rest-api-soqw.onrender.com/api/auth/register", user);
        /// history.push("/login");
-      // navigate("/login");
+      navigate("/login");
       } catch (err) {
         console.log(err);
       }
