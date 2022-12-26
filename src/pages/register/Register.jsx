@@ -23,9 +23,9 @@ export default function Register() {
         password: password.current.value,
       };
       try {
-        await axios.post("/auth/register", user);
-       // history.push("/login");
-       navigate("/login");
+        await axios.post("https://node-rest-api-soqw.onrender.com/api/auth/register", user);
+       /// history.push("/login");
+      // navigate("/login");
       } catch (err) {
         console.log(err);
       }
