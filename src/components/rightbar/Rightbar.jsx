@@ -19,7 +19,7 @@ export default function Rightbar({ user }) {
     const getFriends = async () => {
       try {
         if (user !== undefined) {
-          const friendList = await axios.get("/users/friends/" + user._id);
+          const friendList = await axios.get("https://node-rest-api-soqw.onrender.com/api/users/friends/" + user._id);
           console.log(friendList.data.length);
        if (friendList.data.length !==0 ){
         console.log("calling even with 0 friends");
@@ -38,12 +38,12 @@ export default function Rightbar({ user }) {
   const handleClick = async () => {
     try {
       if (followed) {
-        await axios.put(`/users/${user._id}/unfollow`, {
+        await axios.put(`https://node-rest-api-soqw.onrender.com/api/users/${user._id}/unfollow`, {
           userId: currentUser._id,
         });
         dispatch({ type: "UNFOLLOW", payload: user._id });
       } else {
-        await axios.put(`/users/${user._id}/follow`, {
+        await axios.put(`https://node-rest-api-soqw.onrender.com/api/users/${user._id}/follow`, {
           userId: currentUser._id,
         });
         dispatch({ type: "FOLLOW", payload: user._id });
