@@ -40,6 +40,14 @@ export default function Register() {
           <span className="loginDesc">
             Connect with friends and the world around you on Iqbal@Social.
           </span>
+         
+            <h4 className="supportedFunctionality"><br></br>Supported functionalities: </h4>
+              <br></br>Add new user <br></br>
+              Log in through that user <br></br>
+              Add post <br></br>
+              Like unlike post<br></br>
+             View your profile<br></br>
+           
         </div>
         <div className="loginRight">
           <form className="loginBox" onSubmit={handleClick}>
